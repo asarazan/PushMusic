@@ -271,12 +271,13 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>90F2625712CE69B8007CD561</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>28</integer>
+									<integer>26</integer>
 									<integer>22</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>90F261BE12CE676A007CD561</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>PushMusicPlayer.m</string>
+								<string>PushMusic.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,15 +328,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>90F261BF12CE676A007CD561</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>PushMusicPlayer.m</string>
+										<string>PushMusic.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>90F264F512CE996D007CD561</string>
+										<string>90F2659312CEA42B007CD561</string>
 										<key>history</key>
 										<array>
 											<string>90F262BA12CE6DD7007CD561</string>
-											<string>90F262E412CE7153007CD561</string>
 											<string>90F2637A12CE7A7A007CD561</string>
 											<string>90F263A912CE8035007CD561</string>
 											<string>90F263AA12CE8035007CD561</string>
@@ -346,11 +346,13 @@
 											<string>90F263E812CE832A007CD561</string>
 											<string>90F263E912CE832A007CD561</string>
 											<string>90F263EA12CE832A007CD561</string>
-											<string>90F2644612CE8CF1007CD561</string>
-											<string>90F264AC12CE930C007CD561</string>
-											<string>90F264E912CE9948007CD561</string>
-											<string>90F264F312CE996D007CD561</string>
-											<string>90F264F412CE996D007CD561</string>
+											<string>90F2650112CE9B04007CD561</string>
+											<string>90F2650212CE9B04007CD561</string>
+											<string>90F2654D12CE9F49007CD561</string>
+											<string>90F2658312CEA27F007CD561</string>
+											<string>90F2658512CEA27F007CD561</string>
+											<string>90F2659112CEA42B007CD561</string>
+											<string>90F2659212CEA42B007CD561</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -405,7 +407,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 31}, {603, 297}}</string>
+										<string>{{10, 27}, {1140, 264}}</string>
+										<key>RubberWindowFrame</key>
+										<string>-2 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -444,8 +448,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1140, 264}}</string>
-										<key>RubberWindowFrame</key>
-										<string>-2 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -667,7 +669,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>90F264F612CE996D007CD561</string>
 		<string>90F2636012CE7611007CD561</string>
 		<string>90F2636112CE7611007CD561</string>
 		<string>/Users/asarazan/PushMusic/PushMusic.xcodeproj</string>

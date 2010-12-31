@@ -20,8 +20,7 @@ static const NSString * kTitle=@"title";
 static const NSString * kTrackNumber=@"trackNumber";
 static const NSString * kSongID=@"id";
 
-static const NSString * kPostURLString=@"http://localhost/"; //TODO get dynamic URLs
-static const NSString * kGetURLString=@"http://localhost/";
+static const NSString * kPostURLString=@"http://10.0.1.14:8124/device";
 static const NSString * kPath=@".jsonstorage";
 
 @implementation PushMusic
@@ -33,20 +32,20 @@ static const NSString * kPath=@".jsonstorage";
 		NSData * data=[self createSerializedCollection];
 		NSString *tempDir = NSTemporaryDirectory();
 		NSString * fullPath = [tempDir stringByAppendingFormat:@"/%@.txt",kPath];
-		[data writeToFile:fullPath atomically:NO];
+		[data writeToFile:fullPath atomically:NO encoding:NSUTF8StringEncoding error:NULL];
 		
 		NSURLRequest * request=[PushMusic createPostRequest:[NSURL URLWithString:kPostURLString] withPath:fullPath];
-		[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+		connection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
 		
-		player=[[PushMusicPlayer alloc] init];    }
+		player=[[PushMusicPlayer alloc] init];   
+	}
     return self;
 }
 
 + (NSURLRequest *)createPostRequest:(NSURL *)destination withPath:(NSString *)path {
 	NSMutableURLRequest* post = [NSMutableURLRequest requestWithURL:destination];
 	NSLog(@"Posting to %@", destination);
-	[post addValue: @"application/octet-stream" forHTTPHeaderField:
-	 @"Content-Type"];
+	//[post addValue: @"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
 	[post setHTTPMethod: @"POST"];
 	[post setHTTPBodyStream:[NSInputStream inputStreamWithFileAtPath:path]];
 	
@@ -81,6 +80,15 @@ static const NSString * kPath=@".jsonstorage";
 	[writer writeObjectClose];
 	NSString * buf = [[[NSString alloc] initWithData:[writer buf] encoding:NSUTF8StringEncoding] autorelease];
 	return buf;
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"Failed!");
+}
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+	NSLog(@"Connection Complete");
 }
 
 + (NSArray*)getCollection {

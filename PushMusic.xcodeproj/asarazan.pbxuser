@@ -30,12 +30,18 @@
 			1D6058900D05DD3D006BFB54 /* PushMusic */,
 		);
 		breakpoints = (
-			90F263D912CE820C007CD561 /* PushMusic.m:69 */,
-			90F2642412CE88CE007CD561 /* PushMusic.m:38 */,
-			90F2645912CE8E15007CD561 /* PushMusic.m:41 */,
-			90F2645B12CE8E1E007CD561 /* PushMusic.m:84 */,
-			90F264E412CE991E007CD561 /* PushMusicPlayer.m:55 */,
-			90F264E612CE993B007CD561 /* PushMusicPlayer.m:54 */,
+			90F263D912CE820C007CD561 /* PushMusic.m:68 */,
+			90F2645B12CE8E1E007CD561 /* PushMusic.m:92 */,
+			90F264E412CE991E007CD561 /* PushMusicPlayer.m:57 */,
+			90F264E612CE993B007CD561 /* PushMusicPlayer.m:57 */,
+			90F2651E12CE9DD8007CD561 /* PushMusicPlayer.m:43 */,
+			90F2652412CE9DEB007CD561 /* PushMusicPlayer.m:57 */,
+			90F2652E12CE9E22007CD561 /* PushMusicPlayer.m:56 */,
+			90F2654712CE9F3F007CD561 /* PushMusic.m:42 */,
+			90F2655C12CEA05A007CD561 /* PushMusic.m:87 */,
+			90F2656012CEA098007CD561 /* PushMusicPlayer.m:48 */,
+			90F2656812CEA15D007CD561 /* PushMusic.m:38 */,
+			90F2657F12CEA262007CD561 /* PushMusic.m:91 */,
 		);
 		codeSenseManager = 90F261C512CE676A007CD561 /* Code sense */;
 		executables = (
@@ -296,9 +302,78 @@
 			90F264F312CE996D007CD561 /* PBXTextBookmark */ = 90F264F312CE996D007CD561 /* PBXTextBookmark */;
 			90F264F412CE996D007CD561 /* PBXTextBookmark */ = 90F264F412CE996D007CD561 /* PBXTextBookmark */;
 			90F264F512CE996D007CD561 /* PBXTextBookmark */ = 90F264F512CE996D007CD561 /* PBXTextBookmark */;
+			90F264FF12CE9B04007CD561 /* PBXTextBookmark */ = 90F264FF12CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650012CE9B04007CD561 /* PBXTextBookmark */ = 90F2650012CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650112CE9B04007CD561 /* PBXTextBookmark */ = 90F2650112CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650212CE9B04007CD561 /* PBXTextBookmark */ = 90F2650212CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650312CE9B04007CD561 /* PBXTextBookmark */ = 90F2650312CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650412CE9B04007CD561 /* PBXTextBookmark */ = 90F2650412CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650512CE9B04007CD561 /* PBXTextBookmark */ = 90F2650512CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650612CE9B04007CD561 /* PBXTextBookmark */ = 90F2650612CE9B04007CD561 /* PBXTextBookmark */;
+			90F2650A12CE9B97007CD561 /* PBXTextBookmark */ = 90F2650A12CE9B97007CD561 /* PBXTextBookmark */;
+			90F2650B12CE9B97007CD561 /* PBXTextBookmark */ = 90F2650B12CE9B97007CD561 /* PBXTextBookmark */;
+			90F2650C12CE9B97007CD561 /* PBXTextBookmark */ = 90F2650C12CE9B97007CD561 /* PBXTextBookmark */;
+			90F2650D12CE9B97007CD561 /* PBXTextBookmark */ = 90F2650D12CE9B97007CD561 /* PBXTextBookmark */;
+			90F2651312CE9CE1007CD561 /* PBXTextBookmark */ = 90F2651312CE9CE1007CD561 /* PBXTextBookmark */;
+			90F2651412CE9CE1007CD561 /* PBXTextBookmark */ = 90F2651412CE9CE1007CD561 /* PBXTextBookmark */;
+			90F2651512CE9CE1007CD561 /* PBXTextBookmark */ = 90F2651512CE9CE1007CD561 /* PBXTextBookmark */;
+			90F2651612CE9CE1007CD561 /* PBXTextBookmark */ = 90F2651612CE9CE1007CD561 /* PBXTextBookmark */;
+			90F2651712CE9CE1007CD561 /* PBXTextBookmark */ = 90F2651712CE9CE1007CD561 /* PBXTextBookmark */;
+			90F2651912CE9DA8007CD561 /* PBXTextBookmark */ = 90F2651912CE9DA8007CD561 /* PBXTextBookmark */;
+			90F2651A12CE9DA8007CD561 /* PBXTextBookmark */ = 90F2651A12CE9DA8007CD561 /* PBXTextBookmark */;
+			90F2651B12CE9DA8007CD561 /* PBXTextBookmark */ = 90F2651B12CE9DA8007CD561 /* PBXTextBookmark */;
+			90F2652712CE9DF8007CD561 /* PBXTextBookmark */ = 90F2652712CE9DF8007CD561 /* PBXTextBookmark */;
+			90F2652812CE9DF8007CD561 /* PBXTextBookmark */ = 90F2652812CE9DF8007CD561 /* PBXTextBookmark */;
+			90F2652912CE9DF8007CD561 /* PBXTextBookmark */ = 90F2652912CE9DF8007CD561 /* PBXTextBookmark */;
+			90F2652A12CE9DF8007CD561 /* PBXTextBookmark */ = 90F2652A12CE9DF8007CD561 /* PBXTextBookmark */;
+			90F2653212CE9E2D007CD561 /* PBXTextBookmark */ = 90F2653212CE9E2D007CD561 /* PBXTextBookmark */;
+			90F2653612CE9E98007CD561 /* PBXTextBookmark */ = 90F2653612CE9E98007CD561 /* PBXTextBookmark */;
+			90F2653712CE9E98007CD561 /* PBXTextBookmark */ = 90F2653712CE9E98007CD561 /* PBXTextBookmark */;
+			90F2653812CE9E98007CD561 /* PBXTextBookmark */ = 90F2653812CE9E98007CD561 /* PBXTextBookmark */;
+			90F2654B12CE9F49007CD561 /* PBXTextBookmark */ = 90F2654B12CE9F49007CD561 /* PBXTextBookmark */;
+			90F2654C12CE9F49007CD561 /* PBXTextBookmark */ = 90F2654C12CE9F49007CD561 /* PBXTextBookmark */;
+			90F2654D12CE9F49007CD561 /* PBXTextBookmark */ = 90F2654D12CE9F49007CD561 /* PBXTextBookmark */;
+			90F2654E12CE9F49007CD561 /* PBXTextBookmark */ = 90F2654E12CE9F49007CD561 /* PBXTextBookmark */;
+			90F2654F12CE9F49007CD561 /* PBXTextBookmark */ = 90F2654F12CE9F49007CD561 /* PBXTextBookmark */;
+			90F2655212CE9F7A007CD561 /* PBXTextBookmark */ = 90F2655212CE9F7A007CD561 /* PBXTextBookmark */;
+			90F2655312CE9F7A007CD561 /* PBXTextBookmark */ = 90F2655312CE9F7A007CD561 /* PBXTextBookmark */;
+			90F2655412CE9F7A007CD561 /* PBXTextBookmark */ = 90F2655412CE9F7A007CD561 /* PBXTextBookmark */;
+			90F2655512CE9F8F007CD561 /* PBXTextBookmark */ = 90F2655512CE9F8F007CD561 /* PBXTextBookmark */;
+			90F2655612CE9F8F007CD561 /* PBXTextBookmark */ = 90F2655612CE9F8F007CD561 /* PBXTextBookmark */;
+			90F2655712CE9F8F007CD561 /* PBXTextBookmark */ = 90F2655712CE9F8F007CD561 /* PBXTextBookmark */;
+			90F2656A12CEA161007CD561 /* PBXTextBookmark */ = 90F2656A12CEA161007CD561 /* PBXTextBookmark */;
+			90F2656B12CEA161007CD561 /* PBXTextBookmark */ = 90F2656B12CEA161007CD561 /* PBXTextBookmark */;
+			90F2656C12CEA161007CD561 /* PBXTextBookmark */ = 90F2656C12CEA161007CD561 /* PBXTextBookmark */;
+			90F2656D12CEA161007CD561 /* PBXTextBookmark */ = 90F2656D12CEA161007CD561 /* PBXTextBookmark */;
+			90F2656E12CEA161007CD561 /* PBXTextBookmark */ = 90F2656E12CEA161007CD561 /* PBXTextBookmark */;
+			90F2657512CEA1B1007CD561 /* PBXTextBookmark */ = 90F2657512CEA1B1007CD561 /* PBXTextBookmark */;
+			90F2657612CEA1B1007CD561 /* PBXTextBookmark */ = 90F2657612CEA1B1007CD561 /* PBXTextBookmark */;
+			90F2657712CEA1B1007CD561 /* PBXTextBookmark */ = 90F2657712CEA1B1007CD561 /* PBXTextBookmark */;
+			90F2657A12CEA220007CD561 /* PBXTextBookmark */ = 90F2657A12CEA220007CD561 /* PBXTextBookmark */;
+			90F2657B12CEA220007CD561 /* PBXTextBookmark */ = 90F2657B12CEA220007CD561 /* PBXTextBookmark */;
+			90F2657C12CEA220007CD561 /* PBXTextBookmark */ = 90F2657C12CEA220007CD561 /* PBXTextBookmark */;
+			90F2657D12CEA220007CD561 /* PBXTextBookmark */ = 90F2657D12CEA220007CD561 /* PBXTextBookmark */;
+			90F2658312CEA27F007CD561 /* PBXTextBookmark */ = 90F2658312CEA27F007CD561 /* PBXTextBookmark */;
+			90F2658412CEA27F007CD561 /* PBXTextBookmark */ = 90F2658412CEA27F007CD561 /* PBXTextBookmark */;
+			90F2658512CEA27F007CD561 /* PBXTextBookmark */ = 90F2658512CEA27F007CD561 /* PBXTextBookmark */;
+			90F2658612CEA27F007CD561 /* PBXTextBookmark */ = 90F2658612CEA27F007CD561 /* PBXTextBookmark */;
+			90F2658712CEA27F007CD561 /* PBXTextBookmark */ = 90F2658712CEA27F007CD561 /* PBXTextBookmark */;
+			90F2658812CEA28A007CD561 /* PBXTextBookmark */ = 90F2658812CEA28A007CD561 /* PBXTextBookmark */;
+			90F2658912CEA28A007CD561 /* PBXTextBookmark */ = 90F2658912CEA28A007CD561 /* PBXTextBookmark */;
+			90F2658A12CEA28A007CD561 /* PBXTextBookmark */ = 90F2658A12CEA28A007CD561 /* PBXTextBookmark */;
+			90F2659112CEA42B007CD561 /* PBXTextBookmark */ = 90F2659112CEA42B007CD561 /* PBXTextBookmark */;
+			90F2659212CEA42B007CD561 /* PBXTextBookmark */ = 90F2659212CEA42B007CD561 /* PBXTextBookmark */;
+			90F2659312CEA42B007CD561 /* PBXTextBookmark */ = 90F2659312CEA42B007CD561 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 90F261C412CE676A007CD561 /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 425}}";
+			sepNavSelRange = "{72, 0}";
+			sepNavVisRange = "{0, 306}";
 		};
 	};
 	90F261B912CE6769007CD561 /* PushMusic */ = {
@@ -452,15 +527,15 @@
 	90F262C012CE6E78007CD561 /* PushMusic.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1079, 425}}";
-			sepNavSelRange = "{77, 0}";
-			sepNavVisRange = "{0, 389}";
+			sepNavSelRange = "{565, 0}";
+			sepNavVisRange = "{0, 572}";
 		};
 	};
 	90F262C112CE6E78007CD561 /* PushMusic.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1079, 1430}}";
-			sepNavSelRange = "{77, 0}";
-			sepNavVisRange = "{0, 906}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 1456}}";
+			sepNavSelRange = "{784, 0}";
+			sepNavVisRange = "{536, 1187}";
 		};
 	};
 	90F262E412CE7153007CD561 /* PBXTextBookmark */ = {
@@ -488,7 +563,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 15";
 		rLen = 0;
-		rLoc = 298;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 279;
 		vrLoc = 0;
@@ -498,7 +573,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 39";
 		rLen = 10;
-		rLoc = 1804;
+		rLoc = 1778;
 		rType = 0;
 		vrLen = 260;
 		vrLoc = 815;
@@ -508,7 +583,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 5;
-		rLoc = 3183;
+		rLoc = 3366;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 520;
@@ -528,7 +603,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 5;
-		rLoc = 3183;
+		rLoc = 3366;
 		rType = 0;
 		vrLen = 830;
 		vrLoc = 399;
@@ -548,7 +623,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 2737;
+		rLoc = 2711;
 		rType = 0;
 		vrLen = 334;
 		vrLoc = 707;
@@ -585,7 +660,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 43";
 		rLen = 0;
-		rLoc = 2181;
+		rLoc = 2155;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 416;
@@ -595,7 +670,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 43";
 		rLen = 0;
-		rLoc = 2181;
+		rLoc = 2155;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 416;
@@ -605,7 +680,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 44";
 		rLen = 0;
-		rLoc = 2181;
+		rLoc = 2155;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 416;
@@ -635,7 +710,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 46";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 940;
@@ -645,7 +720,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 2722;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 922;
 		vrLoc = 416;
@@ -655,7 +730,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 45";
 		rLen = 0;
-		rLoc = 2722;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 416;
@@ -675,7 +750,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 45";
 		rLen = 0;
-		rLoc = 2722;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 416;
@@ -705,7 +780,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 15";
 		rLen = 0;
-		rLoc = 298;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 277;
 		vrLoc = 0;
@@ -715,7 +790,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 0;
-		rLoc = 3168;
+		rLoc = 3351;
 		rType = 0;
 		vrLen = 644;
 		vrLoc = 705;
@@ -725,7 +800,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 2722;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 581;
@@ -755,7 +830,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 38";
 		rLen = 0;
-		rLoc = 1792;
+		rLoc = 1766;
 		rType = 0;
 		vrLen = 664;
 		vrLoc = 685;
@@ -765,7 +840,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 2223;
+		rLoc = 2197;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 685;
@@ -815,7 +890,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 2181;
+		rLoc = 2155;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 685;
@@ -846,7 +921,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 76;
+		rLoc = 75;
 		rType = 1;
 	};
 	90F2638712CE7BEB007CD561 /* PBXTextBookmark */ = {
@@ -854,7 +929,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 58";
 		rLen = 0;
-		rLoc = 2722;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 922;
 		vrLoc = 1049;
@@ -874,7 +949,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 55";
 		rLen = 0;
-		rLoc = 2561;
+		rLoc = 2535;
 		rType = 0;
 		vrLen = 1124;
 		vrLoc = 1049;
@@ -894,7 +969,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 56";
 		rLen = 0;
-		rLoc = 2657;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1141;
 		vrLoc = 1049;
@@ -914,7 +989,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 56";
 		rLen = 0;
-		rLoc = 2657;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1141;
 		vrLoc = 1049;
@@ -1024,7 +1099,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 1844;
@@ -1034,7 +1109,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 1435;
@@ -1044,7 +1119,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 637;
 		vrLoc = 1435;
@@ -1074,7 +1149,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 15";
 		rLen = 0;
-		rLoc = 298;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 277;
 		vrLoc = 0;
@@ -1084,7 +1159,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 1633;
@@ -1094,7 +1169,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 75";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 1844;
@@ -1104,7 +1179,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 75";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 452;
 		vrLoc = 2076;
@@ -1124,7 +1199,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 15";
 		rLen = 0;
-		rLoc = 298;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 277;
 		vrLoc = 0;
@@ -1134,7 +1209,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 75";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 1242;
@@ -1144,7 +1219,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 75";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 1242;
@@ -1154,7 +1229,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 1202;
@@ -1174,7 +1249,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 1369;
@@ -1234,7 +1309,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 76";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 1204;
@@ -1244,7 +1319,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 78";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1273;
 		vrLoc = 1310;
@@ -1254,12 +1329,12 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 78";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 816;
 		vrLoc = 1369;
 	};
-	90F263D912CE820C007CD561 /* PushMusic.m:69 */ = {
+	90F263D912CE820C007CD561 /* PushMusic.m:68 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1271,9 +1346,9 @@
 		functionName = "-createSerializedCollection";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 69;
+		lineNumber = 68;
 		location = PushMusic;
-		modificationTime = 315529584.019606;
+		modificationTime = 315532224.975964;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1282,7 +1357,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 54";
 		rLen = 0;
-		rLoc = 2223;
+		rLoc = 2197;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 1205;
@@ -1292,7 +1367,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 54";
 		rLen = 0;
-		rLoc = 2223;
+		rLoc = 2197;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 1205;
@@ -1302,7 +1377,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 53";
 		rLen = 0;
-		rLoc = 2223;
+		rLoc = 2197;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 1435;
@@ -1342,7 +1417,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 59";
 		rLen = 0;
-		rLoc = 2722;
+		rLoc = 2696;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 1186;
@@ -1352,7 +1427,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 72";
 		rLen = 0;
-		rLoc = 2785;
+		rLoc = 2759;
 		rType = 0;
 		vrLen = 1183;
 		vrLoc = 1310;
@@ -1362,7 +1437,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 72";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 2018;
@@ -1372,7 +1447,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 60";
 		rLen = 0;
-		rLoc = 2714;
+		rLoc = 2688;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 1202;
@@ -1382,7 +1457,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 60";
 		rLen = 0;
-		rLoc = 2714;
+		rLoc = 2688;
 		rType = 0;
 		vrLen = 428;
 		vrLoc = 2006;
@@ -1392,7 +1467,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 67";
 		rLen = 0;
-		rLoc = 2783;
+		rLoc = 2757;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 1242;
@@ -1402,7 +1477,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 67";
 		rLen = 0;
-		rLoc = 2783;
+		rLoc = 2757;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 1202;
@@ -1422,7 +1497,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 70";
 		rLen = 0;
-		rLoc = 2783;
+		rLoc = 2757;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 1288;
@@ -1432,7 +1507,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 68";
 		rLen = 0;
-		rLoc = 2755;
+		rLoc = 2729;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 1242;
@@ -1442,7 +1517,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 53";
 		rLen = 0;
-		rLoc = 2137;
+		rLoc = 2111;
 		rType = 0;
 		vrLen = 1279;
 		vrLoc = 1112;
@@ -1452,7 +1527,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 51";
 		rLen = 0;
-		rLoc = 1934;
+		rLoc = 1908;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 1080;
@@ -1462,7 +1537,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 65";
 		rLen = 0;
-		rLoc = 2514;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 1709;
@@ -1472,7 +1547,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 65";
 		rLen = 0;
-		rLoc = 2514;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1086;
 		vrLoc = 1650;
@@ -1482,7 +1557,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 83";
 		rLen = 0;
-		rLoc = 2904;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 2349;
@@ -1492,7 +1567,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 16";
 		rLen = 0;
-		rLoc = 301;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 358;
 		vrLoc = 0;
@@ -1502,7 +1577,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 36";
 		rLen = 0;
-		rLoc = 1421;
+		rLoc = 1396;
 		rType = 0;
 		vrLen = 940;
 		vrLoc = 610;
@@ -1512,7 +1587,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 32";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 1028;
 		vrLoc = 313;
@@ -1522,7 +1597,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 16";
 		rLen = 0;
-		rLoc = 301;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 358;
 		vrLoc = 0;
@@ -1532,7 +1607,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 60";
 		rLen = 31;
-		rLoc = 2125;
+		rLoc = 2099;
 		rType = 0;
 		vrLen = 1176;
 		vrLoc = 1438;
@@ -1542,7 +1617,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 30";
 		rLen = 0;
-		rLoc = 854;
+		rLoc = 781;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 393;
@@ -1552,7 +1627,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 30";
 		rLen = 0;
-		rLoc = 854;
+		rLoc = 781;
 		rType = 0;
 		vrLen = 480;
 		vrLoc = 571;
@@ -1562,7 +1637,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 30";
 		rLen = 0;
-		rLoc = 854;
+		rLoc = 781;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 610;
@@ -1572,7 +1647,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 38";
 		rLen = 0;
-		rLoc = 1393;
+		rLoc = 1368;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 610;
@@ -1582,7 +1657,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 16";
 		rLen = 0;
-		rLoc = 301;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 360;
 		vrLoc = 0;
@@ -1593,7 +1668,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 53;
+		rLoc = 52;
 		rType = 1;
 	};
 	90F2642312CE886E007CD561 /* PBXTextBookmark */ = {
@@ -1601,35 +1676,17 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 33";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 900;
 		rType = 0;
 		vrLen = 1178;
 		vrLoc = 518;
-	};
-	90F2642412CE88CE007CD561 /* PushMusic.m:38 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 90F262C112CE6E78007CD561 /* PushMusic.m */;
-		functionName = "-init";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 38;
-		location = PushMusic;
-		modificationTime = 315529584.026253;
-		originalNumberOfMultipleMatches = 1;
-		state = 2;
 	};
 	90F2642E12CE8900007CD561 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 16";
 		rLen = 0;
-		rLoc = 381;
+		rLoc = 413;
 		rType = 0;
 		vrLen = 360;
 		vrLoc = 0;
@@ -1639,7 +1696,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 48";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 611;
@@ -1649,7 +1706,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 48";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 611;
@@ -1659,7 +1716,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 48";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 611;
@@ -1669,7 +1726,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 48";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 660;
@@ -1679,7 +1736,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 48";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 660;
@@ -1689,7 +1746,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 49";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 698;
@@ -1699,7 +1756,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 48";
 		rLen = 0;
-		rLoc = 1726;
+		rLoc = 1700;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 750;
@@ -1709,7 +1766,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 49";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 750;
@@ -1719,7 +1776,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 50";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 750;
@@ -1729,7 +1786,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 49";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 773;
@@ -1739,7 +1796,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 49";
 		rLen = 0;
-		rLoc = 1729;
+		rLoc = 1703;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 810;
@@ -1749,7 +1806,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 34";
 		rLen = 0;
-		rLoc = 1012;
+		rLoc = 939;
 		rType = 0;
 		vrLen = 646;
 		vrLoc = 791;
@@ -1769,7 +1826,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 13";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1779,7 +1836,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 34";
 		rLen = 0;
-		rLoc = 1012;
+		rLoc = 939;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 772;
@@ -1789,7 +1846,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 86";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2880;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 2375;
@@ -1799,7 +1856,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 14";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 408;
 		vrLoc = 0;
@@ -1809,7 +1866,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 40";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 1209;
 		vrLoc = 518;
@@ -1819,7 +1876,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 40";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 1209;
 		vrLoc = 518;
@@ -1829,7 +1886,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 610;
@@ -1839,30 +1896,12 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 610;
 	};
-	90F2645912CE8E15007CD561 /* PushMusic.m:41 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 90F262C112CE6E78007CD561 /* PushMusic.m */;
-		functionName = "-init";
-		hitCount = 1;
-		ignoreCount = 0;
-		lineNumber = 41;
-		location = PushMusic;
-		modificationTime = 315529607.762683;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
-	};
-	90F2645B12CE8E1E007CD561 /* PushMusic.m:84 */ = {
+	90F2645B12CE8E1E007CD561 /* PushMusic.m:92 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1874,9 +1913,9 @@
 		functionName = "-pollingForSongCallback:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 84;
+		lineNumber = 92;
 		location = PushMusic;
-		modificationTime = 315529584.026811;
+		modificationTime = 315532224.9764;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1885,7 +1924,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 332;
 		vrLoc = 2832;
@@ -1895,7 +1934,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 2865;
@@ -1905,7 +1944,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 15";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 0;
@@ -1915,7 +1954,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 41";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 1445;
@@ -1925,7 +1964,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 89";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2880;
 		rType = 0;
 		vrLen = 537;
 		vrLoc = 3035;
@@ -1935,7 +1974,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 89";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2880;
 		rType = 0;
 		vrLen = 262;
 		vrLoc = 3035;
@@ -1945,7 +1984,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 90";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2880;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 746;
@@ -1955,7 +1994,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 1053;
@@ -1966,7 +2005,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 83;
+		rLoc = 91;
 		rType = 1;
 	};
 	90F2647012CE8F51007CD561 /* PBXTextBookmark */ = {
@@ -1974,23 +2013,23 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 93";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2880;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 2643;
 	};
 	90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1079, 425}}";
-			sepNavSelRange = "{83, 0}";
-			sepNavVisRange = "{0, 489}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 402}}";
+			sepNavSelRange = "{350, 0}";
+			sepNavVisRange = "{0, 529}";
 		};
 	};
 	90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1079, 897}}";
-			sepNavSelRange = "{83, 0}";
-			sepNavVisRange = "{0, 933}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 1027}}";
+			sepNavSelRange = "{1831, 0}";
+			sepNavVisRange = "{0, 1059}";
 		};
 	};
 	90F2648312CE9062007CD561 /* PBXTextBookmark */ = {
@@ -1998,7 +2037,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 16";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 412;
 		vrLoc = 0;
@@ -2008,7 +2047,7 @@
 		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
 		name = "PushMusicPlayer.h: 17";
 		rLen = 0;
-		rLoc = 391;
+		rLoc = 431;
 		rType = 0;
 		vrLen = 331;
 		vrLoc = 0;
@@ -2028,7 +2067,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 42";
 		rLen = 0;
-		rLoc = 1924;
+		rLoc = 2037;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 179;
@@ -2047,8 +2086,8 @@
 		isa = PBXTextBookmark;
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 39";
-		rLen = 81;
-		rLoc = 1186;
+		rLen = 87;
+		rLoc = 1154;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 832;
@@ -2058,7 +2097,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 31";
 		rLen = 0;
-		rLoc = 1242;
+		rLoc = 1481;
 		rType = 0;
 		vrLen = 809;
 		vrLoc = 278;
@@ -2068,7 +2107,7 @@
 		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
 		name = "PushMusicPlayer.h: 17";
 		rLen = 0;
-		rLoc = 391;
+		rLoc = 431;
 		rType = 0;
 		vrLen = 331;
 		vrLoc = 0;
@@ -2088,7 +2127,7 @@
 		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
 		name = "PushMusicPlayer.h: 18";
 		rLen = 0;
-		rLoc = 391;
+		rLoc = 431;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 0;
@@ -2098,7 +2137,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 30";
 		rLen = 0;
-		rLoc = 1239;
+		rLoc = 1371;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 179;
@@ -2108,7 +2147,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 40";
 		rLen = 0;
-		rLoc = 1696;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 815;
 		vrLoc = 179;
@@ -2118,7 +2157,7 @@
 		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
 		name = "PushMusicPlayer.h: 18";
 		rLen = 0;
-		rLoc = 297;
+		rLoc = 269;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 0;
@@ -2129,7 +2168,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 26;
+		rLoc = 25;
 		rType = 1;
 	};
 	90F2649712CE91CF007CD561 /* PBXTextBookmark */ = {
@@ -2137,7 +2176,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 39";
 		rLen = 0;
-		rLoc = 618;
+		rLoc = 627;
 		rType = 0;
 		vrLen = 948;
 		vrLoc = 427;
@@ -2157,7 +2196,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 23";
 		rLen = 0;
-		rLoc = 330;
+		rLoc = 339;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 334;
@@ -2167,7 +2206,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 48";
 		rLen = 0;
-		rLoc = 618;
+		rLoc = 627;
 		rType = 0;
 		vrLen = 967;
 		vrLoc = 748;
@@ -2177,7 +2216,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 61";
 		rLen = 0;
-		rLoc = 1696;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 830;
@@ -2186,8 +2225,8 @@
 		isa = PBXTextBookmark;
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 39";
-		rLen = 81;
-		rLoc = 1186;
+		rLen = 87;
+		rLoc = 1154;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 832;
@@ -2196,8 +2235,8 @@
 		isa = PBXTextBookmark;
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 39";
-		rLen = 81;
-		rLoc = 1186;
+		rLen = 87;
+		rLoc = 1154;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 2570;
@@ -2217,7 +2256,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 40;
-		rLoc = 1750;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 1250;
@@ -2227,7 +2266,7 @@
 		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
 		name = "PushMusic.h: 16";
 		rLen = 0;
-		rLoc = 206;
+		rLoc = 238;
 		rType = 0;
 		vrLen = 452;
 		vrLoc = 0;
@@ -2237,7 +2276,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 59";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 1042;
@@ -2247,7 +2286,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 59";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 1042;
@@ -2257,7 +2296,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 60";
 		rLen = 0;
-		rLoc = 1696;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 1031;
 		vrLoc = 836;
@@ -2277,7 +2316,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 60";
 		rLen = 0;
-		rLoc = 1696;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 974;
 		vrLoc = 893;
@@ -2287,7 +2326,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 59";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 959;
 		vrLoc = 450;
@@ -2297,7 +2336,7 @@
 		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
 		name = "PushMusicPlayer.h: 23";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 0;
@@ -2307,7 +2346,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 59";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 1022;
@@ -2317,7 +2356,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 64";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 1300;
@@ -2327,7 +2366,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 40;
-		rLoc = 1750;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 1400;
@@ -2337,7 +2376,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 64";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 1263;
@@ -2347,7 +2386,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 64";
 		rLen = 0;
-		rLoc = 1495;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 896;
 		vrLoc = 1263;
@@ -2367,7 +2406,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 56";
 		rLen = 0;
-		rLoc = 1094;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 988;
 		vrLoc = 968;
@@ -2377,7 +2416,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 40;
-		rLoc = 1750;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 1400;
@@ -2387,7 +2426,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 40;
-		rLoc = 1750;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 902;
@@ -2397,7 +2436,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 57";
 		rLen = 40;
-		rLoc = 1750;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 541;
 		vrLoc = 858;
@@ -2407,7 +2446,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 34";
 		rLen = 0;
-		rLoc = 857;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 505;
@@ -2416,7 +2455,7 @@
 		isa = PBXTextBookmark;
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		rLen = 0;
-		rLoc = 22;
+		rLoc = 21;
 		rType = 1;
 	};
 	90F264D212CE96CE007CD561 /* PBXTextBookmark */ = {
@@ -2424,7 +2463,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 23";
 		rLen = 0;
-		rLoc = 517;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 150;
@@ -2434,7 +2473,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 23";
 		rLen = 0;
-		rLoc = 517;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 150;
@@ -2444,7 +2483,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 23";
 		rLen = 0;
-		rLoc = 517;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 179;
@@ -2454,7 +2493,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1245;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 859;
@@ -2463,7 +2502,7 @@
 		isa = PBXTextBookmark;
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		rLen = 0;
-		rLoc = 22;
+		rLoc = 21;
 		rType = 1;
 	};
 	90F264DD12CE9776007CD561 /* PBXTextBookmark */ = {
@@ -2471,12 +2510,12 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 24";
 		rLen = 0;
-		rLoc = 578;
+		rLoc = 587;
 		rType = 0;
 		vrLen = 504;
 		vrLoc = 391;
 	};
-	90F264E412CE991E007CD561 /* PushMusicPlayer.m:55 */ = {
+	90F264E412CE991E007CD561 /* PushMusicPlayer.m:57 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2486,15 +2525,15 @@
 		delayBeforeContinue = 0;
 		fileReference = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		functionName = "-getSongRequest";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 55;
+		lineNumber = 57;
 		location = PushMusic;
-		modificationTime = 315529615.022792;
+		modificationTime = 315532224.976582;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
-	90F264E612CE993B007CD561 /* PushMusicPlayer.m:54 */ = {
+	90F264E612CE993B007CD561 /* PushMusicPlayer.m:57 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2504,13 +2543,13 @@
 		delayBeforeContinue = 0;
 		fileReference = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		functionName = "-getSongRequest";
-		hitCount = 2;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 54;
+		lineNumber = 57;
 		location = PushMusic;
-		modificationTime = 315529626.671706;
+		modificationTime = 315532224.976937;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
 	90F264E912CE9948007CD561 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -2527,7 +2566,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 56";
 		rLen = 0;
-		rLoc = 1680;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 1215;
@@ -2544,7 +2583,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1245;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 341;
@@ -2554,7 +2593,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 25";
 		rLen = 0;
-		rLoc = 578;
+		rLoc = 587;
 		rType = 0;
 		vrLen = 416;
 		vrLoc = 598;
@@ -2579,7 +2618,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1245;
 		rType = 0;
 		vrLen = 539;
 		vrLoc = 858;
@@ -2589,7 +2628,7 @@
 		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
 		name = "PushMusic.m: 42";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1245;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 341;
@@ -2599,7 +2638,7 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 56";
 		rLen = 0;
-		rLoc = 1680;
+		rLoc = 1831;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 1215;
@@ -2609,9 +2648,758 @@
 		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
 		name = "PushMusicPlayer.m: 21";
 		rLen = 0;
-		rLoc = 387;
+		rLoc = 396;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 299;
+	};
+	90F264FF12CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
+		name = "PushMusicPlayer.h: 5";
+		rLen = 0;
+		rLoc = 83;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	90F2650012CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PushMusicAppDelegate.m */;
+		name = "PushMusicAppDelegate.m: 5";
+		rLen = 0;
+		rLoc = 88;
+		rType = 0;
+		vrLen = 1072;
+		vrLoc = 0;
+	};
+	90F2650112CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PushMusicAppDelegate.h */;
+		name = "PushMusicAppDelegate.h: 5";
+		rLen = 0;
+		rLoc = 88;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 0;
+	};
+	90F2650212CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 5";
+		rLen = 0;
+		rLoc = 72;
+		rType = 0;
+		vrLen = 306;
+		vrLoc = 0;
+	};
+	90F2650312CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
+		name = "PushMusic.h: 5";
+		rLen = 0;
+		rLoc = 77;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
+	};
+	90F2650412CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 10";
+		rLen = 0;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 0;
+	};
+	90F2650512CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 23";
+		rLen = 0;
+		rLoc = 647;
+		rType = 0;
+		vrLen = 1200;
+		vrLoc = 760;
+	};
+	90F2650612CE9B04007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 23";
+		rLen = 0;
+		rLoc = 647;
+		rType = 0;
+		vrLen = 1200;
+		vrLoc = 760;
+	};
+	90F2650A12CE9B97007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
+		name = "PushMusic.h: 14";
+		rLen = 0;
+		rLoc = 234;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	90F2650B12CE9B97007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 23";
+		rLen = 0;
+		rLoc = 638;
+		rType = 0;
+		vrLen = 1262;
+		vrLoc = 200;
+	};
+	90F2650C12CE9B97007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 54";
+		rLen = 0;
+		rLoc = 1831;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 452;
+	};
+	90F2650D12CE9B97007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 10";
+		rLen = 0;
+		rLoc = 178;
+		rType = 0;
+		vrLen = 935;
+		vrLoc = 3;
+	};
+	90F2651312CE9CE1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PushMusicAppDelegate.m */;
+		name = "PushMusicAppDelegate.m: 5";
+		rLen = 0;
+		rLoc = 88;
+		rType = 0;
+		vrLen = 642;
+		vrLoc = 0;
+	};
+	90F2651412CE9CE1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 32";
+		rLen = 0;
+		rLoc = 832;
+		rType = 0;
+		vrLen = 1186;
+		vrLoc = 401;
+	};
+	90F2651512CE9CE1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
+		name = "PushMusicPlayer.h: 19";
+		rLen = 0;
+		rLoc = 271;
+		rType = 0;
+		vrLen = 473;
+		vrLoc = 0;
+	};
+	90F2651612CE9CE1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 42";
+		rLen = 0;
+		rLoc = 1260;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 739;
+	};
+	90F2651712CE9CE1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 40";
+		rLen = 0;
+		rLoc = 1211;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 739;
+	};
+	90F2651912CE9DA8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 81";
+		rLen = 89;
+		rLoc = 2776;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 2112;
+	};
+	90F2651A12CE9DA8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 43";
+		rLen = 0;
+		rLoc = 1260;
+		rType = 0;
+		vrLen = 742;
+		vrLoc = 1235;
+	};
+	90F2651B12CE9DA8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 44";
+		rLen = 0;
+		rLoc = 1340;
+		rType = 0;
+		vrLen = 1314;
+		vrLoc = 627;
+	};
+	90F2651E12CE9DD8007CD561 /* PushMusicPlayer.m:43 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		functionName = "-connection:didReceiveData:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 43;
+		location = PushMusic;
+		modificationTime = 315532283.107567;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	90F2652412CE9DEB007CD561 /* PushMusicPlayer.m:57 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		functionName = "-getSongRequest";
+		hitCount = 5;
+		ignoreCount = 0;
+		lineNumber = 57;
+		location = PushMusic;
+		modificationTime = 315532295.295722;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	90F2652712CE9DF8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
+		name = "PushMusicPlayer.h: 19";
+		rLen = 0;
+		rLoc = 431;
+		rType = 0;
+		vrLen = 474;
+		vrLoc = 0;
+	};
+	90F2652812CE9DF8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 44";
+		rLen = 0;
+		rLoc = 1369;
+		rType = 0;
+		vrLen = 1124;
+		vrLoc = 611;
+	};
+	90F2652912CE9DF8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		rLen = 0;
+		rLoc = 37;
+		rType = 1;
+	};
+	90F2652A12CE9DF8007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 38";
+		rLen = 0;
+		rLoc = 1155;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 442;
+	};
+	90F2652E12CE9E22007CD561 /* PushMusicPlayer.m:56 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		functionName = "-getSongRequest";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 56;
+		location = PushMusic;
+		modificationTime = 315532224.977801;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	90F2653212CE9E2D007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 38";
+		rLen = 0;
+		rLoc = 1155;
+		rType = 0;
+		vrLen = 1141;
+		vrLoc = 536;
+	};
+	90F2653612CE9E98007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 38";
+		rLen = 0;
+		rLoc = 1155;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 735;
+	};
+	90F2653712CE9E98007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		rLen = 0;
+		rLoc = 55;
+		rType = 1;
+	};
+	90F2653812CE9E98007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 10";
+		rLen = 0;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 291;
+		vrLoc = 0;
+	};
+	90F2654712CE9F3F007CD561 /* PushMusic.m:42 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		functionName = "-init";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 42;
+		location = PushMusic;
+		modificationTime = 315532224.978036;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	90F2654B12CE9F49007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
+		name = "PushMusicPlayer.h: 19";
+		rLen = 0;
+		rLoc = 431;
+		rType = 0;
+		vrLen = 474;
+		vrLoc = 0;
+	};
+	90F2654C12CE9F49007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 52";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 296;
+	};
+	90F2654D12CE9F49007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PushMusicAppDelegate.m */;
+		name = "PushMusicAppDelegate.m: 5";
+		rLen = 0;
+		rLoc = 88;
+		rType = 0;
+		vrLen = 1072;
+		vrLoc = 0;
+	};
+	90F2654E12CE9F49007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 35";
+		rLen = 0;
+		rLoc = 1038;
+		rType = 0;
+		vrLen = 1216;
+		vrLoc = 483;
+	};
+	90F2654F12CE9F49007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 35";
+		rLen = 0;
+		rLoc = 1038;
+		rType = 0;
+		vrLen = 1179;
+		vrLoc = 536;
+	};
+	90F2655212CE9F7A007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 42";
+		rLen = 0;
+		rLoc = 1310;
+		rType = 0;
+		vrLen = 649;
+		vrLoc = 741;
+	};
+	90F2655312CE9F7A007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		rLen = 0;
+		rLoc = 56;
+		rType = 1;
+	};
+	90F2655412CE9F7A007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 52";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 291;
+		vrLoc = 0;
+	};
+	90F2655512CE9F8F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 52";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 1087;
+		vrLoc = 42;
+	};
+	90F2655612CE9F8F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 35";
+		rLen = 0;
+		rLoc = 1038;
+		rType = 0;
+		vrLen = 1141;
+		vrLoc = 576;
+	};
+	90F2655712CE9F8F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 39";
+		rLen = 0;
+		rLoc = 1244;
+		rType = 0;
+		vrLen = 1140;
+		vrLoc = 576;
+	};
+	90F2655C12CEA05A007CD561 /* PushMusic.m:87 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		functionName = "-connection:didFailWithError:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 87;
+		location = PushMusic;
+		modificationTime = 315532225.271788;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	90F2656012CEA098007CD561 /* PushMusicPlayer.m:48 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		functionName = "-connection:didFailWithError:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 48;
+		location = PushMusic;
+		modificationTime = 315532225.302216;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	90F2656812CEA15D007CD561 /* PushMusic.m:38 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		functionName = "-init";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 38;
+		location = PushMusic;
+		modificationTime = 315532229.896546;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	90F2656A12CEA161007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
+		name = "PushMusicPlayer.h: 19";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 529;
+		vrLoc = 0;
+	};
+	90F2656B12CEA161007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 52";
+		rLen = 0;
+		rLoc = 1505;
+		rType = 0;
+		vrLen = 954;
+		vrLoc = 587;
+	};
+	90F2656C12CEA161007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
+		name = "PushMusic.h: 14";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 0;
+	};
+	90F2656D12CEA161007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 38";
+		rLen = 0;
+		rLoc = 1168;
+		rType = 0;
+		vrLen = 1176;
+		vrLoc = 736;
+	};
+	90F2656E12CEA161007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 38";
+		rLen = 0;
+		rLoc = 1168;
+		rType = 0;
+		vrLen = 1176;
+		vrLoc = 736;
+	};
+	90F2657512CEA1B1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 56";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 454;
+		vrLoc = 1479;
+	};
+	90F2657612CEA1B1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		rLen = 0;
+		rLoc = 86;
+		rType = 1;
+	};
+	90F2657712CEA1B1007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 88";
+		rLen = 0;
+		rLoc = 2967;
+		rType = 0;
+		vrLen = 348;
+		vrLoc = 2643;
+	};
+	90F2657A12CEA220007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
+		name = "PushMusic.h: 14";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 0;
+	};
+	90F2657B12CEA220007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 48";
+		rLen = 0;
+		rLoc = 1518;
+		rType = 0;
+		vrLen = 1190;
+		vrLoc = 696;
+	};
+	90F2657C12CEA220007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 56";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 805;
+		vrLoc = 0;
+	};
+	90F2657D12CEA220007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 56";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 947;
+		vrLoc = 1061;
+	};
+	90F2657F12CEA262007CD561 /* PushMusic.m:91 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		functionName = "-connectionDidFinishLoading:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 91;
+		location = PushMusic;
+		modificationTime = 315532225.374309;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	90F2658312CEA27F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C012CE6E78007CD561 /* PushMusic.h */;
+		name = "PushMusic.h: 23";
+		rLen = 0;
+		rLoc = 565;
+		rType = 0;
+		vrLen = 572;
+		vrLoc = 0;
+	};
+	90F2658412CEA27F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 56";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 84;
+	};
+	90F2658512CEA27F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */;
+		name = "PushMusicPlayer.h: 19";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 529;
+		vrLoc = 0;
+	};
+	90F2658612CEA27F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 91";
+		rLen = 0;
+		rLoc = 3087;
+		rType = 0;
+		vrLen = 1151;
+		vrLoc = 576;
+	};
+	90F2658712CEA27F007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 91";
+		rLen = 0;
+		rLoc = 3087;
+		rType = 0;
+		vrLen = 1045;
+		vrLoc = 2134;
+	};
+	90F2658812CEA28A007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 91";
+		rLen = 0;
+		rLoc = 3087;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 2646;
+	};
+	90F2658912CEA28A007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		rLen = 0;
+		rLoc = 56;
+		rType = 1;
+	};
+	90F2658A12CEA28A007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 56";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 454;
+		vrLoc = 1479;
+	};
+	90F2659112CEA42B007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */;
+		name = "PushMusicPlayer.m: 57";
+		rLen = 0;
+		rLoc = 1831;
+		rType = 0;
+		vrLen = 1059;
+		vrLoc = 0;
+	};
+	90F2659212CEA42B007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 38";
+		rLen = 0;
+		rLoc = 1155;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 536;
+	};
+	90F2659312CEA42B007CD561 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 90F262C112CE6E78007CD561 /* PushMusic.m */;
+		name = "PushMusic.m: 32";
+		rLen = 0;
+		rLoc = 784;
+		rType = 0;
+		vrLen = 1187;
+		vrLoc = 536;
 	};
 }
