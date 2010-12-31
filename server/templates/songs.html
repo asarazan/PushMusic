@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <p>Device: {{ deviceName }}</p>
+    <p>Artist: {{ artist }}</p>
+    <p>Album: {{ album }}</p>
+
+    {% for song in songs %}
+      <p><a href="/play/{{ song.key }}">{{ song.title }}</a></p>
+    {% endfor %}
+  </body>
+</html>

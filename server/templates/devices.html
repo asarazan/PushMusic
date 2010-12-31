@@ -1,0 +1,7 @@
+<html>
+  <body>
+    {% for device in devices %}
+      <p><a href="/list/{{ device.key }}/">{{ device.name }}</a></p>
+    {% endfor %}
+  </body>
+</html>

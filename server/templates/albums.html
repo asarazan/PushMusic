@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <p>Device: {{ deviceName }}</p>
+    <p>Artist: {{ artist }}</p>
+
+    {% for album in albums %}
+      <p><a href="{{ album }}/">{{ album }}</a></p>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <p>Device: {{ device.name }}</p>
+    <p>Artist: {{ song.artist }}</p>
+    <p>Album: {{ song.album }}</p>
+    <p>Song: {{ song.title }}</p>
+
+    <form method="POST" action="">
+      <p>
+        Message:<br/>
+        <textarea rows="5" cols="80" name="message"></textarea>
+      </p>
+      <p><input type="submit" value="Send this song"></p>
+    </form>
+  </body>
+</html>
