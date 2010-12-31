@@ -107,7 +107,7 @@ class FormPage(webapp.RequestHandler):
 class DeviceCheckPage(webapp.RequestHandler):
 
   def get(self, deviceId):
-    device = Device.get(deviceId)
+    device = Device.get_by_key_name(deviceId)
     pushes = PushedSong.all().ancestor(device)
     for song in pushes:
       self.response.out.write(song.id)
