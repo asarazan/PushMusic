@@ -3,16 +3,19 @@
 //  PushMusic
 //
 //  Created by Aaron Sarazan on 12/31/10.
-//  Copyright 2010 Spark Plug Games, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+@class PushMusic;
+
 @interface PushMusicAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+	PushMusic * pushMusic;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) PushMusic * pushMusic;
 
 @end
 
