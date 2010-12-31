@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'PushMusic' target in the 'PushMusic' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
