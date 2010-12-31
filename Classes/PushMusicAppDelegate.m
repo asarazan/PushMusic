@@ -3,14 +3,15 @@
 //  PushMusic
 //
 //  Created by Aaron Sarazan on 12/31/10.
-//  Copyright 2010 Spark Plug Games, LLC. All rights reserved.
 //
 
 #import "PushMusicAppDelegate.h"
+#import "PushMusic.h"
 
 @implementation PushMusicAppDelegate
 
 @synthesize window;
+@synthesize pushMusic;
 
 
 #pragma mark -
@@ -19,9 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-    
+    pushMusic=[[PushMusic alloc] init];
+	
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -76,6 +77,7 @@
 
 - (void)dealloc {
     [window release];
+	[pushMusic release];
     [super dealloc];
 }
 
