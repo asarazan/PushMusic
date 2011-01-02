@@ -264,10 +264,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PushMusic_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					PUSHMUSIC_DUMMY_SERVER,
-					PUSHMUSIC_DEBUG,
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = PUSHMUSIC_DEBUG;
 				INFOPLIST_FILE = "PushMusic-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -295,6 +292,42 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		90F266CE12D065B6007CD561 /* Debug Dummy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug Dummy";
+		};
+		90F266CF12D065B6007CD561 /* Debug Dummy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PushMusic_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PUSHMUSIC_DUMMY_SERVER,
+					PUSHMUSIC_DEBUG,
+				);
+				INFOPLIST_FILE = "PushMusic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../json-framework/build/Release\"",
+				);
+				PRODUCT_NAME = PushMusic;
+			};
+			name = "Debug Dummy";
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -330,6 +363,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
+				90F266CF12D065B6007CD561 /* Debug Dummy */,
 				1D6058950D05DD3E006BFB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -339,6 +373,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
+				90F266CE12D065B6007CD561 /* Debug Dummy */,
 				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
