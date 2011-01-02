@@ -26,6 +26,7 @@
 		90F2628D12CE6BBA007CD561 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2628C12CE6BBA007CD561 /* MediaPlayer.framework */; };
 		90F262C212CE6E78007CD561 /* PushMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F262C112CE6E78007CD561 /* PushMusic.m */; };
 		90F2647412CE8F7D007CD561 /* PushMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */; };
+		90F2659512D044F2007CD561 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90F2659412D044F2007CD561 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		90F262C112CE6E78007CD561 /* PushMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMusic.m; sourceTree = "<group>"; };
 		90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMusicPlayer.h; sourceTree = "<group>"; };
 		90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMusicPlayer.m; sourceTree = "<group>"; };
+		90F2659412D044F2007CD561 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* PushMusic-Info.plist */,
+				90F2659412D044F2007CD561 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				90F2659512D044F2007CD561 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +264,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PushMusic_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PUSHMUSIC_DUMMY_SERVER,
+					PUSHMUSIC_DEBUG,
+				);
 				INFOPLIST_FILE = "PushMusic-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (

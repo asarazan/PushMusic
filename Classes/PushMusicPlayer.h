@@ -8,17 +8,15 @@
 #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface PushMusicPlayer : NSObject {
-	
+@interface PushMusicPlayer : NSObject {	
 	NSTimer * pollTimer;
 	MPMusicPlayerController * ipodController;
-
 }
 
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
--(void)pollingForSongCallback:(NSTimer*)timer;
--(void)getSongRequest;
--(void)playSongByID;
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+- (void)pollingForSongCallback:(NSTimer *)timer;
+- (void)getSongRequest;
+- (void)playSongByID:(NSString *)stringId;
 
 @end

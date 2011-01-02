@@ -7,26 +7,26 @@
 
 #import "PushMusicPlayer.h"
 
-static const NSString * kGetURLString=@"http://10.0.1.14:8124/check";
-static const NSString * kTestID=@"14017898169059185142";
+static NSString * const kGetURLString = @"check";
+static NSString * const kTestID = @"14017898169059185142";
 
 @implementation PushMusicPlayer
 
-- (id)init {
-    
+- (id)init {    
     self = [super init];
     if (self) {
-		ipodController=[MPMusicPlayerController iPodMusicPlayer];
+		ipodController = [MPMusicPlayerController iPodMusicPlayer];
 		SEL pollingSelector = @selector(pollingForSongCallback:);
-		pollTimer=[[NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:pollingSelector userInfo:nil repeats:YES] retain];
+		
+		float interval = atof([[[NSUserDefaults standardUserDefaults] stringForKey:@"pref_poll_rate"] UTF8String]);
+		pollTimer = [[NSTimer scheduledTimerWithTimeInterval:interval target:self selector:pollingSelector userInfo:nil repeats:YES] retain];
 		[pollTimer fire];
 	}
 	
 	return self;
 }
 
-- (void)playSongByID:(NSString*)stringId
-{
+- (void)playSongByID:(NSString*)stringId {
 	unsigned long long rawId=strtoull([stringId UTF8String], NULL, 0);
 	NSNumber * number=[NSNumber numberWithUnsignedLongLong:rawId];	
 	MPMediaPropertyPredicate * predicate= [MPMediaPropertyPredicate predicateWithValue:number forProperty:MPMediaItemPropertyPersistentID];
@@ -36,30 +36,32 @@ static const NSString * kTestID=@"14017898169059185142";
 	[ipodController play];	
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	NSLog(@"Response");
 	
 	NSString * stringID = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 	[self playSongByID:stringID];
 }
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	NSLog(@"Failed!");
 }
 
--(void)getSongRequest
-{
+-(void)getSongRequest {
 	NSLog(@"Grabbing song request");
-
-	NSString * checkString = [NSString stringWithFormat:@"%@/%@",kGetURLString,[[UIDevice currentDevice] uniqueIdentifier]];
-	NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:checkString]];
+	
+#ifndef PUSHMUSIC_DUMMY_SERVER
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
+	NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
+	NSURL * checkURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",serverIP,serverPort,kGetURLString,[[UIDevice currentDevice] uniqueIdentifier]]];
+	NSURLRequest * request=[NSURLRequest requestWithURL:checkURL];
 	[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+#else
+	[self playSongByID:kTestID];
+#endif
 }
 
--(void)pollingForSongCallback:(NSTimer*)timer
-{
-	//TODO grab playback info
+-(void)pollingForSongCallback:(NSTimer*)timer {
 	NSLog(@"Polling for playback command");
 	[self getSongRequest];
 }

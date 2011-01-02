@@ -11,30 +11,34 @@
 #import "SBJsonStreamWriter.h"
 
 static NSArray * s_collection;
-static const NSString * kDeviceID=@"deviceId";
-static const NSString * kName=@"name";
-static const NSString * kSongs=@"songs";
-static const NSString * kArtist=@"artist";
-static const NSString * kAlbum=@"album";
-static const NSString * kTitle=@"title";
-static const NSString * kTrackNumber=@"trackNumber";
-static const NSString * kSongID=@"id";
+static NSString * const kDeviceID=@"deviceId";
+static NSString * const kName=@"name";
+static NSString * const kSongs=@"songs";
+static NSString * const kArtist=@"artist";
+static NSString * const kAlbum=@"album";
+static NSString * const kTitle=@"title";
+static NSString * const kTrackNumber=@"trackNumber";
+static NSString * const kSongID=@"id";
 
-static const NSString * kPostURLString=@"http://10.0.1.14:8124/device";
-static const NSString * kPath=@".jsonstorage";
+static NSString * const kPostURLString=@"device";
+static NSString * const kPath=@".jsonstorage";
 
 @implementation PushMusic
 
-- (id)init {
-    
+- (id)init {    
     self = [super init];
     if (self) {
-		NSData * data=[self createSerializedCollection];
-		NSString *tempDir = NSTemporaryDirectory();
+		NSString * data = [self createSerializedCollection];
+		NSString * tempDir = NSTemporaryDirectory();
 		NSString * fullPath = [tempDir stringByAppendingFormat:@"/%@.txt",kPath];
 		[data writeToFile:fullPath atomically:NO encoding:NSUTF8StringEncoding error:NULL];
 		
-		NSURLRequest * request=[PushMusic createPostRequest:[NSURL URLWithString:kPostURLString] withPath:fullPath];
+		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+		NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
+		NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
+		
+		NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@",serverIP,serverPort,kPostURLString]];
+		NSURLRequest * request=[PushMusic createPostRequest:postURL withPath:fullPath];
 		connection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
 		
 		player=[[PushMusicPlayer alloc] init];   
@@ -82,12 +86,10 @@ static const NSString * kPath=@".jsonstorage";
 	return buf;
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	NSLog(@"Failed!");
 }
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSLog(@"Connection Complete");
 }
 
