@@ -11,42 +11,45 @@
 #import "SBJsonStreamWriter.h"
 
 static NSArray * s_collection;
-static const NSString * kDeviceID=@"deviceId";
-static const NSString * kName=@"name";
-static const NSString * kSongs=@"songs";
-static const NSString * kArtist=@"artist";
-static const NSString * kAlbum=@"album";
-static const NSString * kTitle=@"title";
-static const NSString * kTrackNumber=@"trackNumber";
-static const NSString * kSongID=@"id";
+static NSString * const kDeviceID=@"deviceId";
+static NSString * const kName=@"name";
+static NSString * const kSongs=@"songs";
+static NSString * const kArtist=@"artist";
+static NSString * const kAlbum=@"album";
+static NSString * const kTitle=@"title";
+static NSString * const kTrackNumber=@"trackNumber";
+static NSString * const kSongID=@"id";
 
-static const NSString * kPostURLString=@"http://localhost/"; //TODO get dynamic URLs
-static const NSString * kGetURLString=@"http://localhost/";
-static const NSString * kPath=@".jsonstorage";
+static NSString * const kPostURLString=@"device";
+static NSString * const kPath=@".jsonstorage";
 
 @implementation PushMusic
 
-- (id)init {
-    
+- (id)init {    
     self = [super init];
     if (self) {
-		NSData * data=[self createSerializedCollection];
-		NSString *tempDir = NSTemporaryDirectory();
+		NSString * data = [self createSerializedCollection];
+		NSString * tempDir = NSTemporaryDirectory();
 		NSString * fullPath = [tempDir stringByAppendingFormat:@"/%@.txt",kPath];
-		[data writeToFile:fullPath atomically:NO];
+		[data writeToFile:fullPath atomically:NO encoding:NSUTF8StringEncoding error:NULL];
 		
-		NSURLRequest * request=[PushMusic createPostRequest:[NSURL URLWithString:kPostURLString] withPath:fullPath];
-		[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+		NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
+		NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
 		
-		player=[[PushMusicPlayer alloc] init];    }
+		NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@",serverIP,serverPort,kPostURLString]];
+		NSURLRequest * request=[PushMusic createPostRequest:postURL withPath:fullPath];
+		connection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
+		
+		player=[[PushMusicPlayer alloc] init];   
+	}
     return self;
 }
 
 + (NSURLRequest *)createPostRequest:(NSURL *)destination withPath:(NSString *)path {
 	NSMutableURLRequest* post = [NSMutableURLRequest requestWithURL:destination];
 	NSLog(@"Posting to %@", destination);
-	[post addValue: @"application/octet-stream" forHTTPHeaderField:
-	 @"Content-Type"];
+	//[post addValue: @"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
 	[post setHTTPMethod: @"POST"];
 	[post setHTTPBodyStream:[NSInputStream inputStreamWithFileAtPath:path]];
 	
@@ -81,6 +84,13 @@ static const NSString * kPath=@".jsonstorage";
 	[writer writeObjectClose];
 	NSString * buf = [[[NSString alloc] initWithData:[writer buf] encoding:NSUTF8StringEncoding] autorelease];
 	return buf;
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	NSLog(@"Failed!");
+}
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	NSLog(@"Connection Complete");
 }
 
 + (NSArray*)getCollection {

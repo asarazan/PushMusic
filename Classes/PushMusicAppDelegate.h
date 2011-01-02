@@ -10,11 +10,11 @@
 @class PushMusic;
 
 @interface PushMusicAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
+    UIWindow * window;
 	PushMusic * pushMusic;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UIWindow * window;
 @property (nonatomic, retain) PushMusic * pushMusic;
 
 @end

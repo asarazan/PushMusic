@@ -7,27 +7,26 @@
 
 #import "PushMusicPlayer.h"
 
-static const NSString * kGetURLString=@"http://localhost/";
-
-static const NSString * kTestID=@"14017898169059185142";
+static NSString * const kGetURLString = @"check";
+static NSString * const kTestID = @"14017898169059185142";
 
 @implementation PushMusicPlayer
 
-- (id)init {
-    
+- (id)init {    
     self = [super init];
     if (self) {
-		ipodController=[MPMusicPlayerController iPodMusicPlayer];
+		ipodController = [MPMusicPlayerController iPodMusicPlayer];
 		SEL pollingSelector = @selector(pollingForSongCallback:);
-		pollTimer=[[NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:pollingSelector userInfo:nil repeats:YES] retain];
+		
+		float interval = atof([[[NSUserDefaults standardUserDefaults] stringForKey:@"pref_poll_rate"] UTF8String]);
+		pollTimer = [[NSTimer scheduledTimerWithTimeInterval:interval target:self selector:pollingSelector userInfo:nil repeats:YES] retain];
 		[pollTimer fire];
 	}
 	
 	return self;
 }
 
-- (void)playSongByID:(NSString*)stringId
-{
+- (void)playSongByID:(NSString*)stringId {
 	unsigned long long rawId=strtoull([stringId UTF8String], NULL, 0);
 	NSNumber * number=[NSNumber numberWithUnsignedLongLong:rawId];	
 	MPMediaPropertyPredicate * predicate= [MPMediaPropertyPredicate predicateWithValue:number forProperty:MPMediaItemPropertyPersistentID];
@@ -37,28 +36,32 @@ static const NSString * kTestID=@"14017898169059185142";
 	[ipodController play];	
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	NSLog(@"Response");
-}
-
--(void)getSongRequest
-{
-	NSLog(@"Grabbing song request");
-
-	//TODO -- get actual data from a server
-	//NSURLRequest * request=[NSURLRequest requestWithURL:kGetURLString];
-	//[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
 	
-	//REMOVE this if-wrapper, as it's only to make sure it doesn't keep repeating the same song every poll with canned data
-	if(ipodController.playbackState!=MPMusicPlaybackStatePlaying) { 
-		[self playSongByID:kTestID];
-	}
+	NSString * stringID = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	[self playSongByID:stringID];
+}
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	NSLog(@"Failed!");
 }
 
--(void)pollingForSongCallback:(NSTimer*)timer
-{
-	//TODO grab playback info
+-(void)getSongRequest {
+	NSLog(@"Grabbing song request");
+	
+#ifndef PUSHMUSIC_DUMMY_SERVER
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
+	NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
+	NSURL * checkURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",serverIP,serverPort,kGetURLString,[[UIDevice currentDevice] uniqueIdentifier]]];
+	NSURLRequest * request=[NSURLRequest requestWithURL:checkURL];
+	[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+#else
+	[self playSongByID:kTestID];
+#endif
+}
+
+-(void)pollingForSongCallback:(NSTimer*)timer {
 	NSLog(@"Polling for playback command");
 	[self getSongRequest];
 }
