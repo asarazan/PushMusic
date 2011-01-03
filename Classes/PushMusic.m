@@ -28,10 +28,13 @@ static NSString * const kPath=@".jsonstorage";
 - (id)init {    
     self = [super init];
     if (self) {
-		NSString * data = [self createSerializedCollection];
 		NSString * tempDir = NSTemporaryDirectory();
 		NSString * fullPath = [tempDir stringByAppendingFormat:@"/%@.txt",kPath];
+		
+#ifndef PUSHMUSIC_CANNED_DATA
+		NSString * data = [self createSerializedCollection];
 		[data writeToFile:fullPath atomically:NO encoding:NSUTF8StringEncoding error:NULL];
+#endif
 		
 		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
 		NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
@@ -49,7 +52,7 @@ static NSString * const kPath=@".jsonstorage";
 + (NSURLRequest *)createPostRequest:(NSURL *)destination withPath:(NSString *)path {
 	NSMutableURLRequest* post = [NSMutableURLRequest requestWithURL:destination];
 	NSLog(@"Posting to %@", destination);
-	//[post addValue: @"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
+	[post addValue: @"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
 	[post setHTTPMethod: @"POST"];
 	[post setHTTPBodyStream:[NSInputStream inputStreamWithFileAtPath:path]];
 	

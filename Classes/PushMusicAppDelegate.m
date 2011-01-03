@@ -22,8 +22,8 @@
 	//Evidently the 'default' values in the plist don't actually do anything. Thanks Apple.
 	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
 	if([defaults stringForKey:@"pref_server_ip"]==nil) {
-		[defaults setValue:@"10.0.1.142" forKey:@"pref_server_ip"];
-		[defaults setValue:@"8124" forKey:@"pref_server_post"];
+		[defaults setValue:@"localhost" forKey:@"pref_server_ip"];
+		[defaults setValue:@"8080" forKey:@"pref_server_port"];
 		[defaults setValue:@"15" forKey:@"pref_poll_rate"];
 		[defaults synchronize];
 	}
