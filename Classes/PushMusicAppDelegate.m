@@ -11,7 +11,7 @@
 @implementation PushMusicAppDelegate
 
 @synthesize window;
-@synthesize pushMusic;
+@synthesize viewController;
 
 
 #pragma mark -
@@ -28,7 +28,7 @@
 		[defaults synchronize];
 	}
 	
-    pushMusic=[[PushMusic alloc] init];	
+	[self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -84,7 +84,7 @@
 
 - (void)dealloc {
     [window release];
-	[pushMusic release];
+	[viewController release];
     [super dealloc];
 }
 

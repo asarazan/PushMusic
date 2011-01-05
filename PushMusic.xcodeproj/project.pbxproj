@@ -27,6 +27,8 @@
 		90F262C212CE6E78007CD561 /* PushMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F262C112CE6E78007CD561 /* PushMusic.m */; };
 		90F2647412CE8F7D007CD561 /* PushMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */; };
 		90F2659512D044F2007CD561 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90F2659412D044F2007CD561 /* Settings.bundle */; };
+		90F2684A12D3D16F007CD561 /* PushMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2684812D3D16F007CD561 /* PushMusicViewController.m */; };
+		90F2684B12D3D16F007CD561 /* PushMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F2684912D3D16F007CD561 /* PushMusicViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,9 @@
 		90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMusicPlayer.h; sourceTree = "<group>"; };
 		90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMusicPlayer.m; sourceTree = "<group>"; };
 		90F2659412D044F2007CD561 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		90F2684712D3D16F007CD561 /* PushMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMusicViewController.h; sourceTree = "<group>"; };
+		90F2684812D3D16F007CD561 /* PushMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMusicViewController.m; sourceTree = "<group>"; };
+		90F2684912D3D16F007CD561 /* PushMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PushMusicViewController.xib; path = Classes/PushMusicViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,8 @@
 				90F262C112CE6E78007CD561 /* PushMusic.m */,
 				90F2647212CE8F7D007CD561 /* PushMusicPlayer.h */,
 				90F2647312CE8F7D007CD561 /* PushMusicPlayer.m */,
+				90F2684712D3D16F007CD561 /* PushMusicViewController.h */,
+				90F2684812D3D16F007CD561 /* PushMusicViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90F2684912D3D16F007CD561 /* PushMusicViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* PushMusic-Info.plist */,
 				90F2659412D044F2007CD561 /* Settings.bundle */,
@@ -226,6 +234,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				90F2659512D044F2007CD561 /* Settings.bundle in Resources */,
+				90F2684B12D3D16F007CD561 /* PushMusicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +258,7 @@
 				90F2627312CE69C3007CD561 /* SBJsonWriter.m in Sources */,
 				90F262C212CE6E78007CD561 /* PushMusic.m in Sources */,
 				90F2647412CE8F7D007CD561 /* PushMusicPlayer.m in Sources */,
+				90F2684A12D3D16F007CD561 /* PushMusicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

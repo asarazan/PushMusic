@@ -97,10 +97,11 @@ class FormPage(webapp.RequestHandler):
   def post(self, key):
     song = Song.get(key)
     device = song.parent()
-
+    _message = self.request.get('message')
+    logging.warn('Pushing Song: %s with Message: %s' % (song.title, _message))
     PushedSong(parent = device,
                id = song.id,
-               message = self.request.get('message')).put()
+               message = _message).put()
 
 
 

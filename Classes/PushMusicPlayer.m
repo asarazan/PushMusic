@@ -54,8 +54,8 @@ static NSString * const kTestID = @"14017898169059185142";
 	NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
 	NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
 	NSURL * checkURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",serverIP,serverPort,kGetURLString,[[UIDevice currentDevice] uniqueIdentifier]]];
-	NSURLRequest * request=[NSURLRequest requestWithURL:checkURL];
-	[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+	NSURLRequest * request = [NSURLRequest requestWithURL:checkURL];
+	myConnection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
 #else
 	[self playSongByID:kTestID];
 #endif

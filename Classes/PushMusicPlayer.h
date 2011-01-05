@@ -11,6 +11,7 @@
 @interface PushMusicPlayer : NSObject {	
 	NSTimer * pollTimer;
 	MPMusicPlayerController * ipodController;
+	NSURLConnection * myConnection;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;

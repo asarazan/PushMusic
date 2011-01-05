@@ -11,15 +11,18 @@
 
 @interface PushMusic : NSObject {
 	PushMusicPlayer * player;
-	NSURLConnection * connection;
+	NSURLConnection * myConnection;
 }
 
-- (NSString *)createSerializedCollection;
-+ (void) updateCollection;
-+ (NSArray *) getCollection;
-+ (NSURLRequest *)createPostRequest:(NSURL *)destination withPath:(NSString *)path;
+- (void) updateCollection;
+- (NSArray *) getCollection;
+- (void) sendLibrary;
+- (void) createSerializedCollection;
+- (NSString *) getFullPath;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+
++ (NSURLRequest *)createPostRequest:(NSURL *)destination withPath:(NSString *)path;
 
 @end

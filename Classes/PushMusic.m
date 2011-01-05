@@ -23,44 +23,58 @@ static NSString * const kSongID=@"id";
 static NSString * const kPostURLString=@"device";
 static NSString * const kPath=@".jsonstorage";
 
+//God-willing, we won't need to use this again.
+static NSString * const kTestJSON=@"{\"deviceId\":\"d9db5c1b3386c6149ea468dd831423e8f182ef20\",\"name\":\"Robby's iPhone\","
+										"\"songs\":[	{\"title\":\"A-Punk\",\"album\":\"Vampire Weekend\",\"trackNumber\":3,\"id\":15398368358004135853,\"artist\":\"Vampire Weekend\"},"
+														"{\"title\":\"A.D.D\",\"album\":\"Steal This Album!\",\"trackNumber\":7,\"id\":14017898169059185142,\"artist\":\"System of a Down\"} ] }";
+
 @implementation PushMusic
 
 - (id)init {    
     self = [super init];
-    if (self) {
-		NSString * tempDir = NSTemporaryDirectory();
-		NSString * fullPath = [tempDir stringByAppendingFormat:@"/%@.txt",kPath];
-		
-#ifndef PUSHMUSIC_CANNED_DATA
-		NSString * data = [self createSerializedCollection];
-		[data writeToFile:fullPath atomically:NO encoding:NSUTF8StringEncoding error:NULL];
-#endif
-		
-		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-		NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
-		NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
-		
-		NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@",serverIP,serverPort,kPostURLString]];
-		NSURLRequest * request=[PushMusic createPostRequest:postURL withPath:fullPath];
-		connection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
-		
+    if (self) {		
+		[self sendLibrary];		
 		player=[[PushMusicPlayer alloc] init];   
 	}
     return self;
 }
 
+- (NSString *) getFullPath {
+	NSString * tempDir = NSTemporaryDirectory();
+	return [tempDir stringByAppendingFormat:@"/%@.txt",kPath];	
+}
+
+- (void) sendLibrary {
+	[self createSerializedCollection];
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
+	NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
+	
+	NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@",serverIP,serverPort,kPostURLString]];
+	NSURLRequest * request=[[PushMusic createPostRequest:postURL withPath:[self getFullPath]] retain];
+	myConnection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];	
+}
+
 + (NSURLRequest *)createPostRequest:(NSURL *)destination withPath:(NSString *)path {
 	NSMutableURLRequest* post = [NSMutableURLRequest requestWithURL:destination];
-	NSLog(@"Posting to %@", destination);
+	NSLog(@"Posting %@ to %@", path, destination);
 	[post addValue: @"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
 	[post setHTTPMethod: @"POST"];
-	[post setHTTPBodyStream:[NSInputStream inputStreamWithFileAtPath:path]];
+	
+	//TODO: get this thing to work with Streams instead of straight POST
+//	[post setHTTPBodyStream:[NSInputStream inputStreamWithFileAtPath:path]];
+	[post setHTTPBody:[NSData dataWithContentsOfFile:path]];
 	
 	return post;
 }
 
-- (NSString *)createSerializedCollection {
-	NSArray * collection=[PushMusic getCollection];
+- (void)createSerializedCollection {
+	
+	//If we're using canned data (say for Simulator testing) -- then we'll just read the planted file and write it back out.
+#ifdef PUSHMUSIC_CANNED_DATA	
+	NSString * json = [NSString stringWithContentsOfFile:[self getFullPath] encoding:NSUTF8StringEncoding error:NULL];
+#else
+	NSArray * collection=[self getCollection];
 	SBJsonStreamWriter * writer = [[SBJsonStreamWriter alloc] init];
 	[writer writeObjectOpen];
 	
@@ -85,8 +99,9 @@ static NSString * const kPath=@".jsonstorage";
 	
 	[writer writeArrayClose];
 	[writer writeObjectClose];
-	NSString * buf = [[[NSString alloc] initWithData:[writer buf] encoding:NSUTF8StringEncoding] autorelease];
-	return buf;
+	NSString * json = [[[NSString alloc] initWithData:writer.buf encoding:NSUTF8StringEncoding] autorelease]; //May or may not be necessary. Won't take my chances.
+#endif
+	[json writeToFile:[self getFullPath] atomically:NO encoding:NSUTF8StringEncoding error:NULL];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -96,14 +111,15 @@ static NSString * const kPath=@".jsonstorage";
 	NSLog(@"Connection Complete");
 }
 
-+ (NSArray*)getCollection {
+//TODO probably don't need this singleton collection in memory, as we're storing it as a file now.
+- (NSArray*)getCollection {
 	if (nil==s_collection) {
 		[self updateCollection];
 	}
 	return s_collection;
 }
 
-+ (void)updateCollection {
+- (void)updateCollection {
 	MPMediaQuery *everything = [[MPMediaQuery alloc] init];
 	[everything setGroupingType: MPMediaGroupingArtist];
 	s_collection = [everything items];
