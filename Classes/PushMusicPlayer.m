@@ -6,15 +6,14 @@
 //
 
 #import "PushMusicPlayer.h"
-
-static NSString * const kGetURLString = @"check";
-static NSString * const kTestID = @"14017898169059185142";
+#import "Constants.h"
 
 @implementation PushMusicPlayer
 
 - (id)init {    
     self = [super init];
-    if (self) {
+    if (self) { 
+		defaults = [NSUserDefaults standardUserDefaults];
 		ipodController = [MPMusicPlayerController iPodMusicPlayer];
 		SEL pollingSelector = @selector(pollingForSongCallback:);
 		
@@ -50,10 +49,11 @@ static NSString * const kTestID = @"14017898169059185142";
 	NSLog(@"Grabbing song request");
 	
 #ifndef PUSHMUSIC_DUMMY_SERVER
-	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
-	NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
-	NSURL * checkURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",serverIP,serverPort,kGetURLString,[[UIDevice currentDevice] uniqueIdentifier]]];
+	NSURL * checkURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",
+											 [defaults stringForKey:kPrefServerIP],
+											 [defaults stringForKey:kPrefServerPort],
+											 kGetURLString,
+											 [[UIDevice currentDevice] uniqueIdentifier]]];
 	NSURLRequest * request = [NSURLRequest requestWithURL:checkURL];
 	myConnection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
 #else

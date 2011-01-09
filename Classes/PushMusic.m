@@ -9,48 +9,45 @@
 #import "PushMusicPlayer.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "SBJsonStreamWriter.h"
-
-static NSArray * s_collection;
-static NSString * const kDeviceID=@"deviceId";
-static NSString * const kName=@"name";
-static NSString * const kSongs=@"songs";
-static NSString * const kArtist=@"artist";
-static NSString * const kAlbum=@"album";
-static NSString * const kTitle=@"title";
-static NSString * const kTrackNumber=@"trackNumber";
-static NSString * const kSongID=@"id";
-
-static NSString * const kPostURLString=@"device";
-static NSString * const kPath=@".jsonstorage";
-
-//God-willing, we won't need to use this again.
-static NSString * const kTestJSON=@"{\"deviceId\":\"d9db5c1b3386c6149ea468dd831423e8f182ef20\",\"name\":\"Robby's iPhone\","
-										"\"songs\":[	{\"title\":\"A-Punk\",\"album\":\"Vampire Weekend\",\"trackNumber\":3,\"id\":15398368358004135853,\"artist\":\"Vampire Weekend\"},"
-														"{\"title\":\"A.D.D\",\"album\":\"Steal This Album!\",\"trackNumber\":7,\"id\":14017898169059185142,\"artist\":\"System of a Down\"} ] }";
+#import "Utilities.h"
+#import "Constants.h"
 
 @implementation PushMusic
 
 - (id)init {    
     self = [super init];
-    if (self) {		
-		[self sendLibrary];		
+    if (self) {			
+		defaults = [NSUserDefaults standardUserDefaults];
 		player=[[PushMusicPlayer alloc] init];   
 	}
     return self;
 }
 
 - (NSString *) getFullPath {
-	NSString * tempDir = NSTemporaryDirectory();
-	return [tempDir stringByAppendingFormat:@"/%@.txt",kPath];	
+	NSString * tempDir = NSHomeDirectory();
+	return [tempDir stringByAppendingFormat:@"/tmp/%@.txt",kPath];	
 }
 
-- (void) sendLibrary {
+- (void) checkShouldSendLibrary {
 	[self createSerializedCollection];
-	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	NSString * serverIP = [defaults stringForKey:@"pref_server_ip"];
-	NSString * serverPort = [defaults stringForKey:@"pref_server_port"];
+	NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",
+										  [defaults stringForKey:kPrefServerIP],
+										  [defaults stringForKey:kPrefServerPort],
+										  kHashURLString,
+										  [[UIDevice currentDevice] uniqueIdentifier]]];
+	NSURLRequest * request = [NSURLRequest requestWithURL:postURL];
+	myConnectionAsync = [[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
+}
+
+- (void) sendLibrary {	
+	NSString * fullPath = [self getFullPath];
+	NSString * checkString = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:NULL];
+	NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",
+										  [defaults stringForKey:kPrefServerIP],
+										  [defaults stringForKey:kPrefServerPort],
+										  kPostURLString,
+										  [Utilities md5:checkString]]];
 	
-	NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@",serverIP,serverPort,kPostURLString]];
 	NSURLRequest * request=[[PushMusic createPostRequest:postURL withPath:[self getFullPath]] retain];
 	myConnection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];	
 }
@@ -68,13 +65,14 @@ static NSString * const kTestJSON=@"{\"deviceId\":\"d9db5c1b3386c6149ea468dd8314
 	return post;
 }
 
-- (void)createSerializedCollection {
-	
+- (void)createSerializedCollection {	
 	//If we're using canned data (say for Simulator testing) -- then we'll just read the planted file and write it back out.
 #ifdef PUSHMUSIC_CANNED_DATA	
 	NSString * json = [NSString stringWithContentsOfFile:[self getFullPath] encoding:NSUTF8StringEncoding error:NULL];
-#else
-	NSArray * collection=[self getCollection];
+#else	
+	MPMediaQuery *everything = [[MPMediaQuery alloc] init];
+	[everything setGroupingType: MPMediaGroupingArtist];
+	NSArray * collection=[everything items];
 	SBJsonStreamWriter * writer = [[SBJsonStreamWriter alloc] init];
 	[writer writeObjectOpen];
 	
@@ -104,25 +102,29 @@ static NSString * const kTestJSON=@"{\"deviceId\":\"d9db5c1b3386c6149ea468dd8314
 	[json writeToFile:[self getFullPath] atomically:NO encoding:NSUTF8StringEncoding error:NULL];
 }
 
+- (BOOL)collectionExists {
+	return [[NSFileManager defaultManager] fileExistsAtPath:[self getFullPath]];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	if(connection==myConnectionAsync) {
+		NSString * responseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+		NSString * jsonString = [NSString stringWithContentsOfFile:[self getFullPath] encoding:NSUTF8StringEncoding error:NULL];
+		NSString * newSum = [Utilities md5:jsonString];
+		NSLog(@"Got response %@ -- checking against %@\n",responseString,newSum);
+		if(![responseString isEqualToString:newSum]) {
+			[self sendLibrary];
+		} else {
+			//TODO notify already exists
+		}
+	}
+}
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	NSLog(@"Failed!");
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSLog(@"Connection Complete");
-}
-
-//TODO probably don't need this singleton collection in memory, as we're storing it as a file now.
-- (NSArray*)getCollection {
-	if (nil==s_collection) {
-		[self updateCollection];
-	}
-	return s_collection;
-}
-
-- (void)updateCollection {
-	MPMediaQuery *everything = [[MPMediaQuery alloc] init];
-	[everything setGroupingType: MPMediaGroupingArtist];
-	s_collection = [everything items];
 }
 
 - (void)dealloc {

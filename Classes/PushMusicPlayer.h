@@ -12,6 +12,7 @@
 	NSTimer * pollTimer;
 	MPMusicPlayerController * ipodController;
 	NSURLConnection * myConnection;
+	NSUserDefaults * defaults;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;

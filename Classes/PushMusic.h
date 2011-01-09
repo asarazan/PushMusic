@@ -12,10 +12,12 @@
 @interface PushMusic : NSObject {
 	PushMusicPlayer * player;
 	NSURLConnection * myConnection;
+	NSURLConnection * myConnectionAsync;
+	NSUserDefaults * defaults;
 }
 
-- (void) updateCollection;
-- (NSArray *) getCollection;
+- (BOOL) collectionExists;
+- (void) checkShouldSendLibrary;
 - (void) sendLibrary;
 - (void) createSerializedCollection;
 - (NSString *) getFullPath;

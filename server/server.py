@@ -22,8 +22,7 @@ def renderTemplate(name, **kwArgs):
 
 class Device(db.Model):
   name = db.StringProperty()
-
-
+  collectionHash = db.StringProperty()
 
 class Song(db.Model):
   artist = db.StringProperty()
@@ -31,8 +30,6 @@ class Song(db.Model):
   title = db.StringProperty()
   trackNumber = db.IntegerProperty()
   id = db.StringProperty()
-
-
 
 class PushedSong(db.Model):
   id = db.StringProperty()
@@ -48,6 +45,7 @@ class ListPage(webapp.RequestHandler):
       args = [urllib.unquote(arg) for arg in args]
 
     if not args:
+      logging.warn('Listing out Devices')
       self.response.out.write(
           renderTemplate('devices',
                          devices = Device.all().order('name')))
@@ -115,11 +113,29 @@ class DeviceCheckPage(webapp.RequestHandler):
       song.delete()
       return
 
+class HashCheckPage(webapp.RequestHandler):
+
+  def get(self, deviceId):
+    logging.warn('Received Hash Check for %s' % deviceId)
+    device = Device.get_by_key_name(deviceId)
+    if device is None:
+      logging.warn("Can't find Device in database!")
+      self.response.out.write('0')
+      return
+    hash = device.collectionHash
+    if hash is not None:
+      logging.warn('Found hash %s for device %s! Sending now...' % (hash, deviceId))
+      self.response.out.write(hash)
+      return
+    else:
+      logging.warn('No hash! sending sorry...')
+      self.response.out.write('0')
+    
 
 
 class DeviceSyncPage(webapp.RequestHandler):
 
-  def post(self):
+  def post(self, hash):
     logging.warn('got post')
     logging.warn('length: %d' % len(self.request.body))
 
@@ -138,6 +154,10 @@ class DeviceSyncPage(webapp.RequestHandler):
       count += 1
       if count % 50 == 0:
         logging.info(count)
+ 
+    logging.warn("Setting hash to %s" % hash)
+    device.collectionHash = hash
+    device.put()
 
 
 
@@ -146,8 +166,9 @@ application = webapp.WSGIApplication(
                                        ('/', ListPage),
                                        ('/list/(.*)', ListPage),
                                        ('/play/(.*)', FormPage),
-                                       ('/device', DeviceSyncPage),
-                                       ('/check/(.*)', DeviceCheckPage)
+                                       ('/device/(.*)', DeviceSyncPage),
+                                       ('/check/(.*)', DeviceCheckPage),
+								  ('/hash/(.*)', HashCheckPage)
                                      ],
                                      debug=True)
 

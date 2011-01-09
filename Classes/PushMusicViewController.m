@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];	
     pushMusic=[[PushMusic alloc] init];	
+	[pushMusic checkShouldSendLibrary];
 }
 
 /*
@@ -37,7 +38,7 @@
 */
 
 - (IBAction)updateServer {
-	[pushMusic sendLibrary];
+	[pushMusic checkShouldSendLibrary];
 }
 
 - (void)didReceiveMemoryWarning {
