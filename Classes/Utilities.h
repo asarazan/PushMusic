@@ -14,5 +14,6 @@
 }
 
 +(NSString *) md5:(NSString *)str;
++(NSData *) gzipData:(NSData *)data;
 
 @end

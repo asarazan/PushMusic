@@ -56,11 +56,13 @@
 	NSMutableURLRequest* post = [NSMutableURLRequest requestWithURL:destination];
 	NSLog(@"Posting %@ to %@", path, destination);
 	[post addValue: @"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
+	[post addValue: @"gzip"						forHTTPHeaderField:@"Accept-Encoding"]; 
 	[post setHTTPMethod: @"POST"];
 	
 	//TODO: get this thing to work with Streams instead of straight POST
 //	[post setHTTPBodyStream:[NSInputStream inputStreamWithFileAtPath:path]];
-	[post setHTTPBody:[NSData dataWithContentsOfFile:path]];
+	NSData * zippedData = [Utilities gzipData:[NSData dataWithContentsOfFile:path]];
+	[post setHTTPBody:zippedData];
 	
 	return post;
 }

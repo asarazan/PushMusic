@@ -6,6 +6,7 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 import logging
 import os.path
 import urllib
+import zlib
 
 
 try:
@@ -138,8 +139,10 @@ class DeviceSyncPage(webapp.RequestHandler):
   def post(self, hash):
     logging.warn('got post')
     logging.warn('length: %d' % len(self.request.body))
+    
+    fullData = zlib.decompress(self.request.body)
 
-    data = json.loads(self.request.body)
+    data = json.loads(fullData)
     device = Device.get_or_insert(data['deviceId'], name = data['name'])
     count = 0
     for song in data['songs']:

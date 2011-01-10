@@ -9,11 +9,13 @@
 #import "Utilities.h"
 
 #import <CommonCrypto/CommonDigest.h>
+#import <zlib.h>
+#import "NSData+CocoaDevUsersAdditions.h"
 
 @implementation Utilities
 
 //adapted from http://discussions.apple.com/thread.jspa?threadID=1509152
-+(NSString *) md5:(NSString *)str {	
++ (NSString *) md5:(NSString *)str {	
 	const char *cStr = [str UTF8String];	
 	CC_LONG len=strlen(cStr);
 	unsigned char *result = malloc(len);
@@ -28,5 +30,9 @@
 			result[10], result[11],			
 			result[12], result[13],			
 			result[14], result[15]];	
+}
+
++ (NSData *) gzipData:(NSData *)data {
+	return [[data zlibDeflate] autorelease];
 }
 @end
