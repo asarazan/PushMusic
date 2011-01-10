@@ -107,7 +107,13 @@ class FormPage(webapp.RequestHandler):
 class DeviceCheckPage(webapp.RequestHandler):
 
   def get(self, deviceId):
+    logging.warn("Getting device by id: %s" % deviceId)
     device = Device.get_by_key_name(deviceId)
+
+    if device is None:
+      logging.warn("Cannot find device in DB, returning")
+      return
+
     pushes = PushedSong.all().ancestor(device)
     for song in pushes:
       self.response.out.write(song.id)
@@ -144,6 +150,7 @@ class DeviceSyncPage(webapp.RequestHandler):
 
     data = json.loads(fullData)
     device = Device.get_or_insert(data['deviceId'], name = data['name'])
+    logging.warn("Created device with id %s and name %s" % (data['deviceId'], device.name))
     count = 0
     for song in data['songs']:
       songObject = Song(parent = device,

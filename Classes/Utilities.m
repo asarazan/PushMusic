@@ -11,6 +11,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <zlib.h>
 #import "NSData+CocoaDevUsersAdditions.h"
+#import "TargetConditionals.h"
 
 @implementation Utilities
 
@@ -34,5 +35,21 @@
 
 + (NSData *) gzipData:(NSData *)data {
 	return [[data zlibDeflate] autorelease];
+}
+
++ (BOOL) isSimulator {
+#ifdef TARGET_IPHONE_SIMULATOR
+	return YES;
+#else
+	return NO;
+#endif
+}
+
++ (NSString *) deviceId {
+	return [Utilities isSimulator] ? @"0" : [[UIDevice currentDevice] uniqueIdentifier];
+}
+
++ (NSString *) deviceName {
+	return [Utilities isSimulator] ? @"Simulator" : [[UIDevice currentDevice] name];
 }
 @end

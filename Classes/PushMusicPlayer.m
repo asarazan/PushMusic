@@ -7,6 +7,7 @@
 
 #import "PushMusicPlayer.h"
 #import "Constants.h"
+#import "Utilities.h"
 
 @implementation PushMusicPlayer
 
@@ -49,11 +50,12 @@
 	NSLog(@"Grabbing song request");
 	
 #ifndef PUSHMUSIC_DUMMY_SERVER
+	NSString * deviceID = [Utilities deviceId];
 	NSURL * checkURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",
 											 [defaults stringForKey:kPrefServerIP],
 											 [defaults stringForKey:kPrefServerPort],
 											 kGetURLString,
-											 [[UIDevice currentDevice] uniqueIdentifier]]];
+											 deviceID]];
 	NSURLRequest * request = [NSURLRequest requestWithURL:checkURL];
 	myConnection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
 #else

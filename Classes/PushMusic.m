@@ -30,11 +30,12 @@
 
 - (void) checkShouldSendLibrary {
 	[self createSerializedCollection];
+	NSString * deviceID = [Utilities deviceId];
 	NSURL * postURL=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@/%@/%@",
 										  [defaults stringForKey:kPrefServerIP],
 										  [defaults stringForKey:kPrefServerPort],
 										  kHashURLString,
-										  [[UIDevice currentDevice] uniqueIdentifier]]];
+										  deviceID]];
 	NSURLRequest * request = [NSURLRequest requestWithURL:postURL];
 	myConnectionAsync = [[[NSURLConnection alloc] initWithRequest:request delegate:self] retain];
 }
@@ -79,10 +80,10 @@
 	[writer writeObjectOpen];
 	
 	[writer writeString:kDeviceID];
-	[writer writeString:[[UIDevice currentDevice] uniqueIdentifier]];
+	[writer writeString:[Utilities deviceId];
 	
 	[writer writeString:kName];
-	[writer writeString:[[UIDevice currentDevice] name]];
+	[writer writeString:[Utilities deviceName];
 	
 	[writer writeString:kSongs];	
 	[writer writeArrayOpen];

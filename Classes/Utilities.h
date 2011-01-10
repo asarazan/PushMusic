@@ -15,5 +15,8 @@
 
 +(NSString *) md5:(NSString *)str;
 +(NSData *) gzipData:(NSData *)data;
++(BOOL) isSimulator;
++(NSString *) deviceId;
++(NSString *) deviceName;
 
 @end
